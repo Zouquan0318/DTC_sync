@@ -15,7 +15,7 @@ obsClient = ObsClient(access_key_id, secret_access_key, server=server)
 try:
     bucketName = 'test-pocc'
     objectKey = 'dtc_demo/json_file_path_v402.json'  # 例如 'folder/subfolder/filename.json'
-    file_path = 'C:/Users/awosh/OneDrive/Desktop/json_file_path_v402.json'  # 例如 'DTC_20241113.JSON'
+    file_path = 'C:/Users/awosh/Desktop/DTC_SYNC/json_file_path_v402.json'  # 例如 'DTC_20241113.JSON'
 
 # 上传文件
     resp = obsClient.putFile(bucketName, objectKey, file_path)
