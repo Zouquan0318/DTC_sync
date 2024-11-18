@@ -1,6 +1,10 @@
+# get_name_path.py
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import os
+
+# 从 obs_browser.py 导入 upload_to_obs 函数
+from obs_browser import upload_to_obs
 
 class Watcher:
     def __init__(self, directory_to_watch):
@@ -31,9 +35,8 @@ class Handler(FileSystemEventHandler):
             full_path = event.src_path
             # 获取文件名
             filename = os.path.basename(full_path)
-            # 打印文件名和路径
-            print(full_path)
-            print(filename)
+            # 调用上传函数
+            upload_to_obs(full_path, filename)
 
 if __name__ == '__main__':
     w = Watcher(directory_to_watch="C:/Users/awosh/Desktop/DTC_SYNC")
