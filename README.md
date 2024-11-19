@@ -4,3 +4,4 @@
   2.选择本次测试trace 会被存放的位置
   3.点击watchdog start button,脚本开始运行
   4.测试完成后点击关闭，脚本会停止运行
+注意事项：get_name_path.py 和 obs_browser.py 两个文件必要要放在同一个目录下
